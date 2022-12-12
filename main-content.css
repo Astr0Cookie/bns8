@@ -1,0 +1,65 @@
+main {
+    margin-top: 7%;
+}
+
+main > article {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+}
+
+.img-bg img {
+    opacity: 100%;
+    width: 420px;
+    height: 300px;
+    object-fit: fill;
+    object-fit: cover;
+    opacity: 95%;
+    transition:ease-in-out 200ms;
+    padding-top: 20px;
+}
+
+.description {
+    padding-left: 20px;
+    font-size: medium;
+    border-left: 1px solid black;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.img-bg {
+    margin-left:3%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden{
+    opacity: 0%;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 100%;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+.magic {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(90deg, #02b35d, #4abf73, #6eca8a, #8ed5a1, #abe0b8, #c7eacf, #e3f5e7, #ffffff, #c7eacf, #abe0b8, #8ed5a1, #4abf73);
+    white-space: nowrap;
+    background-size: 200%;
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
